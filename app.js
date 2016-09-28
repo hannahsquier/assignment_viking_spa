@@ -40,4 +40,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl:"templates/newOrder.html",
     controller: "orderNewCtrl"
   })
+
+  .state("orders", {
+    url: "/orders",
+    templateUrl: "/templates/orders.html",
+    abstract: true
+  })
+
+  .state("orders.show", {
+    url:"/:id",
+    templateUrl: "/templates/ordersShow.html",
+    controller: "orderShowCtrl"
+  })
 })
